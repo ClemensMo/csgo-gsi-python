@@ -20,7 +20,7 @@ LED_STRIP = ws.WS2811_STRIP_BRG
 
 def set_flash_color(flash_value):
     c = Color(flash_value, flash_value, flash_value)
-    for i in range(strip.numPixels()):
+    for i in range(200, strip.numPixels()):
         strip.setPixelColor(i, c)
     strip.show()
 
