@@ -12,5 +12,5 @@ if __name__ == '__main__':
         print(server.get_info("player", "state", "flashed"))
         handle_light_events(server.get_info("player", "state", "flashed"),
                             server.get_info("player", "state", "flashed"),
-                            server.get_info("player", "state", "health"))
-        time.sleep(0.01)
+                            server.get_info("player", "state", "health"),
+                            server.get_info("player", "state", "burning"))

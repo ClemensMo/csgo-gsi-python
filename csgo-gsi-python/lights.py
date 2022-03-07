@@ -25,13 +25,24 @@ def set_flash_color(flash_value):
     strip.show()
 
 
-def handle_light_events(flashed, health, bomb):
+def set_fire_color(fire_value):
+    c = Color(255 * (255/fire_value), 165 * (255/fire_value), 0)
+    for i in range(200, strip.numPixels()):
+        strip.setPixelColor(i, c)
+    strip.show()
+
+
+def handle_light_events(flashed, health, bomb, fire):
     if flashed > 0:
         set_flash_color(flashed)
+    elif fire > 0:
+        set_flash_color(fire)
     elif health < 10:
         print('Turn lights red')
     elif bomb == 'planted':
         print('eskalieren')
+    else:
+        set_flash_color(flashed)
 
 
 strip = PixelStrip(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
