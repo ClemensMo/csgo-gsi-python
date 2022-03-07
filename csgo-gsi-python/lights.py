@@ -36,7 +36,7 @@ def handle_light_events(flashed, health, bomb, fire):
     if flashed > 0:
         set_flash_color(flashed)
     elif fire > 0:
-        set_flash_color(fire)
+        set_fire_color(fire)
     elif health < 10:
         print('Turn lights red')
     elif bomb == 'planted':
