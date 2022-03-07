@@ -22,6 +22,7 @@ def set_flash_color(flash_value):
     c = Color(flash_value, flash_value, flash_value)
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, c)
+    strip.show()
 
 
 def handle_light_events(flashed, health, bomb):
