@@ -26,7 +26,7 @@ def set_flash_color(flash_value):
 
 
 def set_fire_color(fire_value):
-    c = Color(int(255 * (255/fire_value)), 0, 0) # int(165 * (255/fire_value)), 0)
+    c = Color(0, int(255 * (255/fire_value)), 0,)   # int(165 * (255/fire_value)), 0)
     for i in range(200, strip.numPixels()):
         strip.setPixelColor(i, c)
     strip.show()
