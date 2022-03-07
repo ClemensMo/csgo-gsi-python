@@ -9,7 +9,3 @@ class GameState:
         self.phase_countdowns = PhaseCountdowns()
         self.bomb = Bomb()
         self.round = Round()
-
-    def prettyprint(self):
-        print(f'Player: {self.player.state = }, {self.player.state = }, {self.player.state = }, {self.player.state = },'
-              f' {self.player.state = }, {self.player.state = }, {self.player.state = }')
